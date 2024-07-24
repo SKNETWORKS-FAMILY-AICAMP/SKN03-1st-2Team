@@ -70,6 +70,12 @@ Database 내 데이터 저장
 
 ![image](https://github.com/user-attachments/assets/06001bb7-51b9-46ca-9e33-b5a00cb3e222)
 
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/b26293ef-9f53-4875-b32e-1ffee4c29e35">
+
+
+기업별 테이블 관리
+
+
 
 
 
