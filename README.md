@@ -47,6 +47,12 @@ FAQ 데이터, 질문과 답변, 해당 질문에 해당하는 카테고리 정�
 
 ### 구현
 
+BeautifulSoup : 정적 페이지(카카오네비, KT원네비, 아틀란) 크롤링
+
+pandas : 해당 데이터들의 DataFrame 형식의 저장
+
+sqlAlchemy : MySQL에 데이터 프레임 전송
+
 HTML 파일 파싱 라이브러리, BeautifulSoup 의 사용,
 
 ![image](https://github.com/user-attachments/assets/c59d6171-3412-435f-9a7e-0693ce9fe1a6)
