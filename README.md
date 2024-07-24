@@ -75,6 +75,9 @@ Database 내 데이터 저장
 
 기업별 테이블 관리
 
+# 데이터 흐름도
+
+![image](https://github.com/user-attachments/assets/92f489bb-abaf-4603-a160-b95fe4502661)
 
 
 
