@@ -65,7 +65,7 @@ FAQ 데이터, 질문과 답변, 해당 질문에 해당하는 카테고리 정�
 
              □ streamlit 내 버튼 조작으로 사용자 요구에 해당하는 조건의 데이터 수집
 
-        □ 기능 구현
+        □ 서비스 기능 구현
 
              □ 사용자 조작으로 조건별 탐색
 
@@ -85,7 +85,7 @@ FAQ 데이터, 질문과 답변, 해당 질문에 해당하는 카테고리 정�
       
              □ 크롤링 데이터 DB 저장
     
-      □ 기능 구현
+      □ 서비스 기능 구현
 
              □ 기업별 FAQ 내용 ( 질문, 답변, 키워드 ) 확인
 
@@ -95,7 +95,7 @@ FAQ 데이터, 질문과 답변, 해당 질문에 해당하는 카테고리 정�
         
     □ Streamlit
 
-           □ 편리한 UI 구성
+             □ 편리한 UI 구성
 
 
 
@@ -106,16 +106,12 @@ FAQ 데이터, 질문과 답변, 해당 질문에 해당하는 카테고리 정�
 
 API 를 통해 데이터 호출 
 
-
-
-
-
-
+사용자로부터 날짜, 지역의 정보를 입력받아 해당하는 API 데이터 추출
 
 
 ## 데이터 흐름도
 
-![image](https://github.com/user-attachments/assets/46aa3581-c766-4ea1-96b2-a548d152efe4)
+![image](https://github.com/user-attachments/assets/f1973ed6-8d8e-494e-8269-c3041eccda30)
 
 
 
@@ -138,6 +134,8 @@ sqlAlchemy : MySQL에 데이터 프레임 전송
 
 
 각 기업별 FAQ 가 저장되어 있는 형태가 다르므로 각기 다른 크롤링 과정 수행
+
+# 기업 선정
 
 ![image](https://github.com/user-attachments/assets/5fdbba81-e909-4e76-beb4-11f967e82715)
 
@@ -169,21 +167,29 @@ Database 내 데이터 저장
 
 # Streamlit 내 데이터 연동
 
-## 전국 자동차 등록 현황
+# 전국 자동차 등록 현황
+
+streamlit 버튼을 통한 사용자 입력으로 API 호출 명령어 생성
+
+호출된 데이터 표현
+
+![image](https://github.com/user-attachments/assets/3c5591d5-6b29-4a2b-9ee8-bbd733d9a3bd)
 
 
-~~
+# streamlit 화면
+
+![image](https://github.com/user-attachments/assets/2c417726-0c87-4341-ae16-551226a42020)
+
+![image](https://github.com/user-attachments/assets/949f062b-4fbe-47e0-b74d-1802f3c8341a)
 
 
+# 기업 FAQ 조회 시스템
 
-## 기업 FAQ 조회 시스템
+sql 구문으로 각 기업 데이터 테이블 호출
 
-sql 구문을 통한 각 기업 데이터 테이블 호출
+해당 데이터들의 DataFrame 형식 저장
 
-해당 데이터들의 DataFrame 형식의 저장
-
-DataFrame 의 조작으로 필요 데이터 추출, 출력
-
+DataFrame 조작으로 필요 데이터 추출, 출력
 
 ![image](https://github.com/user-attachments/assets/5012e987-21cf-4952-97ed-e9d4e57a4bcb)
 
@@ -192,15 +198,49 @@ DataFrame 의 조작으로 필요 데이터 추출, 출력
 ![image](https://github.com/user-attachments/assets/1677a299-bdb9-4272-99d9-23341395aea8)
 
 
+# 구현
+
+# 발생 이슈들
+
+## DB 생성 및 연동 문제
+
+크롤링 데이터 저장 및 호출 과정에서 DB 와의 연동 문제 발생,
+
+DB 생성, 암호 등의 간단한 문제, DB 연동 전 해당 내용 확인 필요
+
+## 키워드 추출 문제
+
+특정 기업에서 제공하는 FAQ 내 키워드 데이터가 존재하지 않음, 임의의 Keyword 를 추출했어야 했음,
+
+정규 방정식을 사용한 질문 데이터의 전처리를 통해 임의의 Keyword 추출
+
+## 웹 페이지 접근 문제
+
+여러 페이지로 구성되어 있는 FAQ 데이터 수집 시 각 페이지 별 이동 문제
+
+기업별 URL 구조 ( path, parameter ) 분석으로 별도의 하이퍼 링크 크롤링 없이 페이지 이동
+
+## 날짜 데이터 형식 문제
+
+API 호출시 필요한 날짜 데이터의 형식과 streamlit 을 통해 수집한 날짜 데이터의 형식이 맞지 않음,
+
+date_to_int 함수를 통한 형식 변환
+
+## 크롤링 코드 통합 문제
+
+기업별 크롤링을 각각의 팀원들이 분담하여 진행, 변수명부터 url 접근 방식, db 연동까지 다 다른 형식으로 구성되어 있었음
+
+통합 과정에서 반드시 통일해야 하는 부분부터 통합화
 
 
-  
 
 
 
 
 
-~~ 각 구현 부분에 대한 설명을 이곳에 추가할까
+
+
+
 
 
 
