@@ -19,6 +19,52 @@
 
 강동구 지역의 관용-소형 차량 조회 시 23 의 차량 대수의 출력
 
+
+# TODO 리스트
+
+     □ 전국 자동차 등록 현황 및 기업 FAQ 조회 시스템
+
+      □ 전국 자동차 등록 현황
+  
+        □ 데이터 수집
+
+        □ API 를 통한 데이터 수집
+
+        □ streamlit 과의 연동으로 사용자 요구에 해당하는 조건의 데이터 수집
+
+      □ 기능 구현
+
+        □ 사용자 조작으로 조건별 탐색
+
+        □ 차량 대수 출력, 1D 데이터
+
+        □ 그래프를 통한 2D 시각화
+
+        □ 지도 위 3D 그래프 출력 
+  
+    □ 기업 FAQ 조회 시스템
+    
+      □ 데이터 수집
+        
+        □ FAQ 내용 크롤링
+      
+        □ 이미지 크롤링
+      
+        □ 크롤링 데이터 DB 저장
+    
+      □ 기능 구현
+
+        □ 기업별 FAQ 내용 ( 질문, 답변, 키워드 ) 확인
+
+        □ FAQ 검색 시스템
+
+        □ FAQ Keyword Clustering
+        
+    □ Streamlit
+
+      □ 편리한 UI 구성
+
+
 ### 구현
 
 API 를 통해 데이터 호출, 
@@ -107,9 +153,16 @@ sql 구문을 통한 각 기업 데이터 테이블 호출
 DataFrame 의 조작으로 필요 데이터 추출, 출력
 
 
+![image](https://github.com/user-attachments/assets/5012e987-21cf-4952-97ed-e9d4e57a4bcb)
+
+### streamlit 화면
+
+![image](https://github.com/user-attachments/assets/1677a299-bdb9-4272-99d9-23341395aea8)
 
 
 
+
+  
 
 
 
