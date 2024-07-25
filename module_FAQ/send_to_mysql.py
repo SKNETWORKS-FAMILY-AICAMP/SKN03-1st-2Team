@@ -2,10 +2,10 @@ from sqlalchemy import create_engine
 
 def send_2_mysql(p_df, p_company):
     # MySQL 데이터베이스 연결 정보 설정
-    user = 'root'
-    password = 'root1234'
+    user = 'user'
+    password = 'user1234'
     host = 'localhost'
-    database = 'dbname'
+    database = 'faq_db'
 
     # SQLAlchemy 사용
     engine = create_engine(f'mysql+mysqlconnector://{user}:{password}@{host}/{database}')
