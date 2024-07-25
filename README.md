@@ -63,7 +63,7 @@ FAQ 데이터, 질문과 답변, 해당 질문에 해당하는 카테고리 정�
 
              □ API 를 통한 데이터 수집
 
-             □ streamlit 과의 연동으로 사용자 요구에 해당하는 조건의 데이터 수집
+             □ streamlit 내 버튼 조작으로 사용자 요구에 해당하는 조건의 데이터 수집
 
         □ 기능 구현
 
@@ -104,24 +104,38 @@ FAQ 데이터, 질문과 답변, 해당 질문에 해당하는 카테고리 정�
 
 ## 전국 자동차 등록 현황
 
-API 를 통해 데이터 호출, 
+API 를 통해 데이터 호출 
 
 
-~ 내용 추가
+
+
+
+
+
+
+## 데이터 흐름도
+
+![image](https://github.com/user-attachments/assets/46aa3581-c766-4ea1-96b2-a548d152efe4)
+
+
 
 ## 기업 FAQ 조회 시스템
 
-BeautifulSoup : 정적 페이지(카카오네비, KT원네비, 아틀란) 크롤링
+BeautifulSoup : HTML 파일 파싱 라이브러리, 정적 페이지(카카오네비, KT원네비, 아틀란) 크롤링
+
 
 pandas : 해당 데이터들의 DataFrame 형식의 저장
 
+
 sqlAlchemy : MySQL에 데이터 프레임 전송
 
-HTML 파일 파싱 라이브러리, BeautifulSoup 의 사용,
 
 ![image](https://github.com/user-attachments/assets/c59d6171-3412-435f-9a7e-0693ce9fe1a6)
 
+
 크롬 개발자 도구를 통해 FAQ 데이터들이 정적 수집이 가능한 형태로 존재하는 것을 확인
+
+
 
 각 기업별 FAQ 가 저장되어 있는 형태가 다르므로 각기 다른 크롤링 과정 수행
 
@@ -173,7 +187,7 @@ DataFrame 의 조작으로 필요 데이터 추출, 출력
 
 ![image](https://github.com/user-attachments/assets/5012e987-21cf-4952-97ed-e9d4e57a4bcb)
 
-### streamlit 화면
+# streamlit 화면
 
 ![image](https://github.com/user-attachments/assets/1677a299-bdb9-4272-99d9-23341395aea8)
 
