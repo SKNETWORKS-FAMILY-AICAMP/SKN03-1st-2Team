@@ -1,26 +1,59 @@
 # SKN03-1st-2Team
 # 전국 자동차 등록 현황 및 기업 FAQ 조회 시스템
 
+
 전국 자동차 등록 현황, 기업 FAQ 조회 시스템의 두 가지 서비스를 streamlit 을 통해 구현하는 것이 목표
+
 
 ## 전국 자동차 등록 현황
 
+
 ### 데이터
+
 
 통계시점에 자동차등록원부에 등록하고 운행할 수 있는 자동차(승용, 승합, 화물, 특수)의 대수를 각 세부사항별(차종별, 연료별, 최대적재량별, 규모별 등)로 등록 현황을 제공
 
+
 ![image](https://github.com/user-attachments/assets/76591312-73a7-4cae-ba81-f2c3f99546a3)
+
 
 ### 기능
 
+
 사용자의 선택으로 해당 조건( 기간, 지역, 차종 )의 차량 대수 조회 가능
 
+
 <img width="391" alt="image" src="https://github.com/user-attachments/assets/31c77063-65b9-4208-8357-7ae7314842d1">
+
 
 강동구 지역의 관용-소형 차량 조회 시 23 의 차량 대수의 출력
 
 
+## 기업 FAQ 조회 시스템
+
+
+### 데이터
+
+
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/5f9575b8-1eb0-46c0-9a2b-d0531b07333d">
+
+
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/4e9bd7fa-b9a6-456d-bf32-368f1903f6e3">
+
+
+
+
+FAQ 데이터, 질문과 답변, 해당 질문에 해당하는 카테고리 정보가 있음
+
+
+### 기능
+
+
+비슷한 종류의 기업들의 FAQ 들을 모아 표시, 비교 가능
+
+
 # TODO 리스트
+
 
      □ 전국 자동차 등록 현황 및 기업 FAQ 조회 시스템
 
@@ -28,70 +61,55 @@
   
         □ 데이터 수집
 
-        □ API 를 통한 데이터 수집
+             □ API 를 통한 데이터 수집
 
-        □ streamlit 과의 연동으로 사용자 요구에 해당하는 조건의 데이터 수집
+             □ streamlit 과의 연동으로 사용자 요구에 해당하는 조건의 데이터 수집
 
-      □ 기능 구현
+        □ 기능 구현
 
-        □ 사용자 조작으로 조건별 탐색
+             □ 사용자 조작으로 조건별 탐색
 
-        □ 차량 대수 출력, 1D 데이터
+             □ 차량 대수 출력, 1D 데이터
 
-        □ 그래프를 통한 2D 시각화
+             □ 그래프를 통한 2D 시각화
 
-        □ 지도 위 3D 그래프 출력 
+             □ 지도 위 3D 그래프 출력 
   
     □ 기업 FAQ 조회 시스템
     
       □ 데이터 수집
         
-        □ FAQ 내용 크롤링
+             □ FAQ 내용 크롤링
       
-        □ 이미지 크롤링
+             □ 이미지 크롤링
       
-        □ 크롤링 데이터 DB 저장
+             □ 크롤링 데이터 DB 저장
     
       □ 기능 구현
 
-        □ 기업별 FAQ 내용 ( 질문, 답변, 키워드 ) 확인
+             □ 기업별 FAQ 내용 ( 질문, 답변, 키워드 ) 확인
 
-        □ FAQ 검색 시스템
+             □ FAQ 검색 시스템
 
-        □ FAQ Keyword Clustering
+             □ FAQ Keyword Clustering
         
     □ Streamlit
 
-      □ 편리한 UI 구성
+           □ 편리한 UI 구성
 
 
-### 구현
+
+
+# 구현
+
+## 전국 자동차 등록 현황
 
 API 를 통해 데이터 호출, 
 
 
 ~ 내용 추가
 
-
-
 ## 기업 FAQ 조회 시스템
-
-### 데이터
-
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/5f9575b8-1eb0-46c0-9a2b-d0531b07333d">
-
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/4e9bd7fa-b9a6-456d-bf32-368f1903f6e3">
-
-
-
-FAQ 데이터, 질문과 답변, 해당 질문에 해당하는 카테고리 정보가 있음
-
-### 기능
-
-비슷한 종류의 기업들의 FAQ 들을 모아 표시, 비교 가능
-
-
-### 구현
 
 BeautifulSoup : 정적 페이지(카카오네비, KT원네비, 아틀란) 크롤링
 
